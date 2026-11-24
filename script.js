@@ -23,19 +23,19 @@ function render() {
     content = intro + '<form>' + emailField + (recovery ? '' : passwordField) + (login ? '<p class="recover"><a href="#recuperar">Esqueci minha senha</a></p>' : '') + '<button class="primary">' + (recovery ? 'Simular recuperação' : title) + '</button></form>' + (login ? '<p class="footer">Ainda não tem conta? <a href="#cadastro">Criar conta</a></p>' : back);
   }
   view.innerHTML = '<h1 id="title" tabindex="-1">' + title + '</h1>' + content;
-  if (hash) document.querySelector('h1').focus({preventScroll:true});
-  view.querySelector('form')?.addEventListener('submit',event => {
+  if (hash) document.querySelector('h1').focus({ preventScroll: true });
+  view.querySelector('form')?.addEventListener('submit', event => {
     event.preventDefault();
     location.hash = route === 'recuperar' ? 'aviso' : 'painel';
   });
-  view.querySelector('.eye')?.addEventListener('click',event => {
+  view.querySelector('.eye')?.addEventListener('click', event => {
     const button = event.currentTarget;
     const field = view.querySelector('#senha');
     const show = field.type === 'password';
     field.type = show ? 'text' : 'password';
-    button.setAttribute('aria-pressed',String(show));
-    button.setAttribute('aria-label',show ? 'Ocultar senha' : 'Mostrar senha');
+    button.setAttribute('aria-pressed', String(show));
+    button.setAttribute('aria-label', show ? 'Ocultar senha' : 'Mostrar senha');
   });
 }
-window.addEventListener('hashchange',render);
+window.addEventListener('hashchange', render);
 render();
