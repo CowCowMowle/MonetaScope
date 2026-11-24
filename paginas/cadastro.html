@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#124559">
+    <title>Criar conta · MonetaScope</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer>
+    </script>
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <img class="logo" src="outputs/logo-monetascope.png" alt="MonetaScope">
+      </header>
+      <main>
+        <section class="card" aria-labelledby="title">
+          <div>
+            <h1 id="title" tabindex="-1">Criar conta</h1>
+            <p class="description">Experimente o cadastro com dados fictícios.</p>
+            <form action="painel.html">
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input id="email" type="email" autocomplete="off" required placeholder="voce@exemplo.com">
+              </div>
+              <div class="field">
+                <label for="senha">Senha</label>
+                <input id="senha" class="password" type="password" required placeholder="••••••••" autocomplete="off">
+                <button type="button" class="eye" aria-label="Mostrar senha" aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M2 12s3.4-7 10-7 10 7 10 7-3.4 7-10 7S2 12 2 12Z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </button>
+              </div>
+              <button class="primary">Criar conta</button>
+            </form>
+            <p class="footer">
+              <a href="index.html">Voltar para entrar</a>
+            </p>
+          </div>
+        </section>
+        <figure>
+          <img class="art" src="outputs/arte-barbatana.webp" alt="Barbatana azul-petróleo cercada por curvas que lembram ondas no mar.">
+        </figure>
+      </main>
+    </div>
+  </body>
+</html>
